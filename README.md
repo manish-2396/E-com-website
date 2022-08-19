@@ -21,6 +21,8 @@ E-commerce (electronic commerce) is the buying and selling of goods and services
 
 ## Deployment Link
 
-https://62ff3ae9d580be4ed3244f0a--e-com-website.netlify.app/
+ **[Deployment Link](https://62ff3ae9d580be4ed3244f0a--e-com-website.netlify.app/)**
+
+
 
 
