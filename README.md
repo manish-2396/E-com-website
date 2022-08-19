@@ -6,6 +6,7 @@ E-commerce (electronic commerce) is the buying and selling of goods and services
 <ul>
 <li>Login and Logout</li>
 <li>Add to Cart</li>
+  <li>Pages</li>
 <ul>
 <li>Men Page</li>
 <li>Women Page</li>
