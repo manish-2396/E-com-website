@@ -1,4 +1,4 @@
-import { Box} from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 // import axios from "axios"
@@ -11,7 +11,7 @@ function Cart() {
   }, []);
 
   const fetchData = () => {
-    fetch("http://localhost:3001/bag")
+    fetch("https://ecommerce-tanner-goods.herokuapp.com/bag")
       .then((d) => d.json())
       .then((res) => {
         setList(res);
@@ -19,12 +19,12 @@ function Cart() {
   };
 
 
-    
-  const DeleteProduct =(id) => {
-    fetch(`http://localhost:3001/bag/${id}`,{
+
+  const DeleteProduct = (id) => {
+    fetch(`https://ecommerce-tanner-goods.herokuapp.com/bag/${id}`, {
       method: 'DELETE'
-    }).then((result) =>{
-      result.json().then((res)=>{
+    }).then((result) => {
+      result.json().then((res) => {
         console.log(res)
         fetchData();
       })
@@ -40,7 +40,7 @@ function Cart() {
     div {
       width: 280px;
       margin-top: 3%;
-      height: 400px;
+      height: 430px;
       color: gray.400;
     }
     div img {
@@ -58,15 +58,15 @@ function Cart() {
     }
   `;
   return (
-    <div style={{marginBottom:"30px"}}>
+    <div style={{ marginBottom: "30px" }}>
       <Div>
         {list.map((e) => (
           <div key={e.id}>
-            <Box boxShadow="dark-lg" p="2" rounded="md" bg="white">
+            <Box boxShadow="dark-lg" p="4" rounded="md" bg="white">
               <img src={e.thumbnail} alt="imgs" />
               <h5>{e.title}</h5>
               <p>{e.price}</p>
-              <button onClick={()=> DeleteProduct(e.id) }>Remove</button>
+              <button style={{ marginTop: "30px", border: "1px solid black", padding: "0.2rem", borderRadius: "10px", backgroundColor: "teal", color: "#fff" }} onClick={() => DeleteProduct(e.id)}>Remove</button>
             </Box>
           </div>
         ))}

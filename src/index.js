@@ -4,9 +4,9 @@ import reportWebVitals from "./reactWebWitals";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
-import { AuthProvider } from "./contex/AuthContext";
+import { AuthProvider } from "./Contex/AuthContext";
 ReactDOM.render(
-  <React.StrictMode>
+  
     <BrowserRouter>
       <ChakraProvider>
         <AuthProvider>
@@ -14,7 +14,7 @@ ReactDOM.render(
         </AuthProvider>
       </ChakraProvider>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
+    
+  ,document.getElementById("root")
 );
 reportWebVitals();

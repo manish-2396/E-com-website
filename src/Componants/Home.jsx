@@ -7,6 +7,7 @@ function Home() {
     display: flex;
     justify-content: space-around;
     text-decoration: none;
+    margin:5rem;
     div img {
       width: 400px;
       height: 400px;
@@ -66,7 +67,7 @@ function Home() {
       <Cont>
 
 
-        <Link style={{ textDecoration: "none" }} to={"/mens"}>
+        <Link style={{ textDecoration: "none" , margin:"2rem" }} to={"/mens"}>
           <div>
             <img
               src="https://lsmensclothing.com/wp-content/uploads/2016/09/Suits.png"
@@ -77,7 +78,7 @@ function Home() {
         </Link>
 
 
-        <Link style={{ textDecoration: "none" }} to={"/womens"}>
+        <Link style={{ textDecoration: "none" , margin:"2rem" }} to={"/womens"}>
           <div>
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKxbYXUpZSWHxZzUfb4bliHBpfitSjo9d43Q&usqp=CAU"
@@ -89,7 +90,7 @@ function Home() {
 
 
 
-        <Link style={{ textDecoration: "none" }} to={"/kids"}>
+        <Link style={{ textDecoration: "none" , margin:"2rem" }} to={"/kids"}>
           <div>
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcAmpBOUSfPgAPfnmoeAnn_2ty5mPp3ooUBw&usqp=CAU"

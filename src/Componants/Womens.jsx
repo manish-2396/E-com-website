@@ -8,7 +8,7 @@ function Womens() {
     fetchData();
   }, []);
   const fetchData = () => {
-    fetch("http://localhost:3001/womens")
+    fetch("https://ecommerce-tanner-goods.herokuapp.com/womens")
       .then((d) => d.json())
       .then((res) => {
         setList(res);
@@ -21,9 +21,9 @@ function Womens() {
     margin-left: 8%;
     grid-template-columns: auto auto auto auto;
     div {
-      width: 300px;
-      margin-top: 3%;
-      height: 400px;
+      width: 280px;
+      margin: 3%;
+      height: 450px;
       color: gray.400;
     }
     div img {
@@ -47,7 +47,7 @@ function Womens() {
       title: title,
       price: price,
     };
-    fetch("http://localhost:3001/bag", {
+    fetch("https://ecommerce-tanner-goods.herokuapp.com/bag", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
@@ -60,7 +60,7 @@ function Womens() {
       <Div>
         {list.map((e) => (
           <div key={e.product_id}>
-            <Box boxShadow="dark-lg" p="2" rounded="md" bg="white">
+            <Box boxShadow="dark-lg" p="3" rounded="md" bg="white">
               <img src={e.thumbnail} alt="imgs" />
               <h5>{e.title}</h5>
               <p>{e.price}</p>

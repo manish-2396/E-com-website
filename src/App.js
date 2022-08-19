@@ -19,37 +19,51 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
 
-        <Route path="/cart" element=
-        {
-          <Require>
-            <Cart />
-          </Require>
-        }>
-        </Route>
+        <Route
+          path="/cart"
+          element={
+            <Require>
+              <Cart />
+            </Require>
+          }
+        ></Route>
 
-        <Route path="/mens" element={
-          <Require>
-            <Mens />
-          </Require>}>
-        </Route>
+        <Route
+          path="/mens"
+          element={
+            <Require>
+              <Mens />
+            </Require>
+          }
+        ></Route>
 
-        <Route path="/womens" element={
-          <Require>
-            <Womens />
-          </Require>}>
-        </Route>
+        <Route
+          path="/womens"
+          element={
+            <Require>
+              <Womens />
+            </Require>
+          }
+        ></Route>
 
-        <Route path="/kids" element={
-          <Require>
-            <Kids />
-          </Require>}>
-        </Route>
+        <Route
+          path="/kids"
+          element={
+            <Require>
+              <Kids />
+            </Require>
+          }
+        ></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/about" element={<About />}>  </Route>
-        <Route path="/faq" element={<FAQ />}>   </Route>
+        <Route path="/about" element={<About />}>
+          {" "}
+        </Route>
+        <Route path="/faq" element={<FAQ />}>
+          {" "}
+        </Route>
         <Route path="/login" element={<Login />}></Route>
       </Routes>
-      <br/>
+      <br />
       <Footer />
     </div>
   );

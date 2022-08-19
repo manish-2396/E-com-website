@@ -8,7 +8,7 @@ function Kids() {
     fetchData();
   }, []);
   const fetchData = () => {
-    fetch("http://localhost:3001/kids")
+    fetch("https://ecommerce-tanner-goods.herokuapp.com/kids")
       .then((d) => d.json())
       .then((res) => {
         setList(res);
@@ -21,9 +21,9 @@ function Kids() {
     margin-left: 8%;
     grid-template-columns: auto auto auto auto;
     div {
-      width: 90%;
+      width: 280px;
       margin-top: 3%;
-      height: 400px;
+      height: 420px;
       color: gray.400;
     }
     div img {
@@ -47,7 +47,7 @@ function Kids() {
       title: title,
       price: price,
     };
-    fetch("http://localhost:3001/bag", {
+    fetch("https://ecommerce-tanner-goods.herokuapp.com/bag", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
